@@ -251,6 +251,7 @@ namespace InventoryManagement
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "createAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "createAccount";
             this.Load += new System.EventHandler(this.createAccount_Load);
             this.panel1.ResumeLayout(false);

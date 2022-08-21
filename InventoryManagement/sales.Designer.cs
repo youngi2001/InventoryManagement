@@ -38,7 +38,6 @@ namespace InventoryManagement
             this.menu = new System.Windows.Forms.Button();
             this.buttonUpdateUsers = new System.Windows.Forms.Button();
             this.receipt = new System.Windows.Forms.Button();
-            this.buttonDeleteUser = new System.Windows.Forms.Button();
             this.buttonNewSales = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
             this.salesTable = new System.Windows.Forms.DataGridView();
@@ -48,6 +47,7 @@ namespace InventoryManagement
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scanProduct = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesTable)).BeginInit();
@@ -76,10 +76,10 @@ namespace InventoryManagement
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.scanProduct);
             this.panel2.Controls.Add(this.menu);
             this.panel2.Controls.Add(this.buttonUpdateUsers);
             this.panel2.Controls.Add(this.receipt);
-            this.panel2.Controls.Add(this.buttonDeleteUser);
             this.panel2.Controls.Add(this.buttonNewSales);
             this.panel2.Location = new System.Drawing.Point(0, 179);
             this.panel2.Name = "panel2";
@@ -124,18 +124,6 @@ namespace InventoryManagement
             this.receipt.Text = "Generate Sales Receipt";
             this.receipt.UseVisualStyleBackColor = false;
             this.receipt.Click += new System.EventHandler(this.receipt_Click);
-            // 
-            // buttonDeleteUser
-            // 
-            this.buttonDeleteUser.BackColor = System.Drawing.Color.Black;
-            this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteUser.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteUser.Location = new System.Drawing.Point(33, 120);
-            this.buttonDeleteUser.Name = "buttonDeleteUser";
-            this.buttonDeleteUser.Size = new System.Drawing.Size(149, 45);
-            this.buttonDeleteUser.TabIndex = 5;
-            this.buttonDeleteUser.Text = "Delete sale";
-            this.buttonDeleteUser.UseVisualStyleBackColor = false;
             // 
             // buttonNewSales
             // 
@@ -236,6 +224,19 @@ namespace InventoryManagement
             this.Total.Name = "Total";
             this.Total.Width = 120;
             // 
+            // scanProduct
+            // 
+            this.scanProduct.BackColor = System.Drawing.Color.Black;
+            this.scanProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scanProduct.ForeColor = System.Drawing.Color.White;
+            this.scanProduct.Location = new System.Drawing.Point(33, 110);
+            this.scanProduct.Name = "scanProduct";
+            this.scanProduct.Size = new System.Drawing.Size(149, 56);
+            this.scanProduct.TabIndex = 8;
+            this.scanProduct.Text = "Scan Product Barcode";
+            this.scanProduct.UseVisualStyleBackColor = false;
+            this.scanProduct.Click += new System.EventHandler(this.scanProduct_Click);
+            // 
             // sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +248,7 @@ namespace InventoryManagement
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "sales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sales";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -265,7 +267,6 @@ namespace InventoryManagement
         private System.Windows.Forms.Button menu;
         private System.Windows.Forms.Button buttonUpdateUsers;
         private System.Windows.Forms.Button receipt;
-        private System.Windows.Forms.Button buttonDeleteUser;
         private System.Windows.Forms.Button buttonNewSales;
         private System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.DataGridView salesTable;
@@ -275,5 +276,6 @@ namespace InventoryManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Button scanProduct;
     }
 }

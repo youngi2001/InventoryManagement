@@ -10,18 +10,21 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 
+
 namespace InventoryManagement
 {
     public partial class sales : Form
     {
         private string conn;
         private MySqlConnection connection;
+
         public sales()
         {
             InitializeComponent();
             updateTable();
 
         }
+        
         private void db_connection()
         {
             try
@@ -72,6 +75,16 @@ namespace InventoryManagement
         private void buttonUpdateUsers_Click(object sender, EventArgs e)
         {
             updateTable();
+        }
+
+        
+
+        private void scanProduct_Click(object sender, EventArgs e)
+        {
+            scanProduct productScan = new scanProduct();
+            productScan.Show();
+
+
         }
     }
 }
