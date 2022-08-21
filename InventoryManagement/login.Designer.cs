@@ -140,6 +140,7 @@ namespace InventoryManagement
             this.Controls.Add(this.userID);
             this.Controls.Add(this.password);
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

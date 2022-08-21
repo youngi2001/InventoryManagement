@@ -37,7 +37,8 @@ namespace InventoryManagement
 
         private void addAccount_Click(object sender, EventArgs e)
         {
-
+            newSale();
+            updateTable();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,20 +48,25 @@ namespace InventoryManagement
         private void newSale()
         {
             db_connection();
-            if (customerID.Text == "" || productID.Text == "" || quantity.Text == "" || totalAmount.Text == "")
+            if (customerID.Text == "" || userID.Text == "" || quantity.Text == "" || totalAmount.Text == "")
             {
                 MessageBox.Show("Empty Fields Detected ! Please fill up all the fields");
                 Hide();
             }
             else
             {
-                string query = "INSERT INTO `customer`(`customerID`, `productID`, `quantity`, `total`) VALUES ('" + customerID.Text + "','" + productID.Text + "','" + quantity.Text + "','" + totalAmount.Text + "')";
+                string query = "INSERT INTO `sales` (`userID`,`customerID`,  `quantity`, `total`) VALUES ('" + userID.Text + "', '" + customerID.Text + "','" + quantity.Text + "','" + totalAmount.Text + "')";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 int rows = cmd.ExecuteNonQuery();
                 MessageBox.Show("Customer account created successfully\n " + rows + " user added!!");
                 Hide();
             }
         }
+        private void updateTable()
+        {
+            sales table = new sales();
+            table.updateTable();
+        }
     }
-    }
+    
 }

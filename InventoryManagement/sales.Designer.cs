@@ -29,9 +29,9 @@ namespace InventoryManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.shopName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,7 +41,7 @@ namespace InventoryManagement
             this.buttonDeleteUser = new System.Windows.Forms.Button();
             this.buttonNewSales = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
-            this.userTable = new System.Windows.Forms.DataGridView();
+            this.salesTable = new System.Windows.Forms.DataGridView();
             this.salesID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@ namespace InventoryManagement
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesTable)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,8 +108,9 @@ namespace InventoryManagement
             this.buttonUpdateUsers.Name = "buttonUpdateUsers";
             this.buttonUpdateUsers.Size = new System.Drawing.Size(149, 45);
             this.buttonUpdateUsers.TabIndex = 6;
-            this.buttonUpdateUsers.Text = "Close Sales";
+            this.buttonUpdateUsers.Text = "Update Sales table";
             this.buttonUpdateUsers.UseVisualStyleBackColor = false;
+            this.buttonUpdateUsers.Click += new System.EventHandler(this.buttonUpdateUsers_Click);
             // 
             // receipt
             // 
@@ -122,6 +123,7 @@ namespace InventoryManagement
             this.receipt.TabIndex = 5;
             this.receipt.Text = "Generate Sales Receipt";
             this.receipt.UseVisualStyleBackColor = false;
+            this.receipt.Click += new System.EventHandler(this.receipt_Click);
             // 
             // buttonDeleteUser
             // 
@@ -159,38 +161,38 @@ namespace InventoryManagement
             this.labelUser.TabIndex = 5;
             this.labelUser.Text = "Sales(transaction) for Today";
             // 
-            // userTable
+            // salesTable
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.salesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.salesTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.salesID,
             this.userID,
             this.customerID,
             this.date,
             this.quantity,
             this.Total});
-            this.userTable.Location = new System.Drawing.Point(217, 179);
-            this.userTable.Name = "userTable";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.userTable.Size = new System.Drawing.Size(790, 485);
-            this.userTable.TabIndex = 6;
+            this.salesTable.Location = new System.Drawing.Point(217, 179);
+            this.salesTable.Name = "salesTable";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesTable.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.salesTable.Size = new System.Drawing.Size(790, 485);
+            this.salesTable.TabIndex = 6;
             // 
             // salesID
             // 
@@ -240,7 +242,7 @@ namespace InventoryManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.ClientSize = new System.Drawing.Size(1016, 676);
-            this.Controls.Add(this.userTable);
+            this.Controls.Add(this.salesTable);
             this.Controls.Add(this.labelUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -249,7 +251,7 @@ namespace InventoryManagement
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +268,7 @@ namespace InventoryManagement
         private System.Windows.Forms.Button buttonDeleteUser;
         private System.Windows.Forms.Button buttonNewSales;
         private System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.DataGridView userTable;
+        private System.Windows.Forms.DataGridView salesTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn salesID;
         private System.Windows.Forms.DataGridViewTextBoxColumn userID;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerID;

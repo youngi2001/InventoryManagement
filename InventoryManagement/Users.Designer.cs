@@ -29,24 +29,24 @@ namespace InventoryManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.shopName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.menu = new System.Windows.Forms.Button();
+            this.buttonUpdateUsers = new System.Windows.Forms.Button();
+            this.buttonChangePassword = new System.Windows.Forms.Button();
+            this.buttonDeleteUser = new System.Windows.Forms.Button();
+            this.buttonAddUser = new System.Windows.Forms.Button();
             this.labelUser = new System.Windows.Forms.Label();
             this.userTable = new System.Windows.Forms.DataGridView();
-            this.buttonAddUser = new System.Windows.Forms.Button();
-            this.buttonDeleteUser = new System.Windows.Forms.Button();
-            this.buttonChangePassword = new System.Windows.Forms.Button();
             this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonUpdateUsers = new System.Windows.Forms.Button();
-            this.menu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
@@ -85,62 +85,44 @@ namespace InventoryManagement
             this.panel2.Size = new System.Drawing.Size(211, 485);
             this.panel2.TabIndex = 3;
             // 
-            // labelUser
+            // menu
             // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Century Schoolbook", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(151)))));
-            this.labelUser.Location = new System.Drawing.Point(482, 107);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(95, 32);
-            this.labelUser.TabIndex = 1;
-            this.labelUser.Text = "Users";
+            this.menu.BackColor = System.Drawing.Color.Black;
+            this.menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu.ForeColor = System.Drawing.Color.White;
+            this.menu.Location = new System.Drawing.Point(33, 387);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(149, 45);
+            this.menu.TabIndex = 7;
+            this.menu.Text = "Main Menu";
+            this.menu.UseVisualStyleBackColor = false;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
-            // userTable
+            // buttonUpdateUsers
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserID,
-            this.fname,
-            this.surName,
-            this.password,
-            this.role});
-            this.userTable.Location = new System.Drawing.Point(220, 142);
-            this.userTable.Name = "userTable";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTable.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.userTable.Size = new System.Drawing.Size(790, 485);
-            this.userTable.TabIndex = 4;
-            this.userTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userTable_CellContentClick);
+            this.buttonUpdateUsers.BackColor = System.Drawing.Color.Black;
+            this.buttonUpdateUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateUsers.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdateUsers.Location = new System.Drawing.Point(33, 182);
+            this.buttonUpdateUsers.Name = "buttonUpdateUsers";
+            this.buttonUpdateUsers.Size = new System.Drawing.Size(149, 45);
+            this.buttonUpdateUsers.TabIndex = 6;
+            this.buttonUpdateUsers.Text = "Update Users";
+            this.buttonUpdateUsers.UseVisualStyleBackColor = false;
+            this.buttonUpdateUsers.Click += new System.EventHandler(this.buttonUpdateUsers_Click);
             // 
-            // buttonAddUser
+            // buttonChangePassword
             // 
-            this.buttonAddUser.BackColor = System.Drawing.Color.Black;
-            this.buttonAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUser.ForeColor = System.Drawing.Color.White;
-            this.buttonAddUser.Location = new System.Drawing.Point(33, 53);
-            this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(149, 41);
-            this.buttonAddUser.TabIndex = 5;
-            this.buttonAddUser.Text = "Add User";
-            this.buttonAddUser.UseVisualStyleBackColor = false;
-            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
+            this.buttonChangePassword.BackColor = System.Drawing.Color.Black;
+            this.buttonChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangePassword.ForeColor = System.Drawing.Color.White;
+            this.buttonChangePassword.Location = new System.Drawing.Point(33, 246);
+            this.buttonChangePassword.Name = "buttonChangePassword";
+            this.buttonChangePassword.Size = new System.Drawing.Size(149, 53);
+            this.buttonChangePassword.TabIndex = 5;
+            this.buttonChangePassword.Text = "Change User Password";
+            this.buttonChangePassword.UseVisualStyleBackColor = false;
+            this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
             // 
             // buttonDeleteUser
             // 
@@ -155,18 +137,62 @@ namespace InventoryManagement
             this.buttonDeleteUser.UseVisualStyleBackColor = false;
             this.buttonDeleteUser.Click += new System.EventHandler(this.buttonDeleteUser_Click);
             // 
-            // buttonChangePassword
+            // buttonAddUser
             // 
-            this.buttonChangePassword.BackColor = System.Drawing.Color.Black;
-            this.buttonChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChangePassword.ForeColor = System.Drawing.Color.White;
-            this.buttonChangePassword.Location = new System.Drawing.Point(33, 246);
-            this.buttonChangePassword.Name = "buttonChangePassword";
-            this.buttonChangePassword.Size = new System.Drawing.Size(149, 53);
-            this.buttonChangePassword.TabIndex = 5;
-            this.buttonChangePassword.Text = "Change User Password";
-            this.buttonChangePassword.UseVisualStyleBackColor = false;
-            this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
+            this.buttonAddUser.BackColor = System.Drawing.Color.Black;
+            this.buttonAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddUser.ForeColor = System.Drawing.Color.White;
+            this.buttonAddUser.Location = new System.Drawing.Point(33, 53);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(149, 41);
+            this.buttonAddUser.TabIndex = 5;
+            this.buttonAddUser.Text = "Add User";
+            this.buttonAddUser.UseVisualStyleBackColor = false;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
+            // 
+            // labelUser
+            // 
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Century Schoolbook", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(151)))));
+            this.labelUser.Location = new System.Drawing.Point(482, 107);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(95, 32);
+            this.labelUser.TabIndex = 1;
+            this.labelUser.Text = "Users";
+            // 
+            // userTable
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserID,
+            this.fname,
+            this.surName,
+            this.password,
+            this.role});
+            this.userTable.Location = new System.Drawing.Point(220, 142);
+            this.userTable.Name = "userTable";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.userTable.Size = new System.Drawing.Size(790, 485);
+            this.userTable.TabIndex = 4;
+            this.userTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userTable_CellContentClick);
             // 
             // UserID
             // 
@@ -202,32 +228,6 @@ namespace InventoryManagement
             this.role.Name = "role";
             this.role.Width = 160;
             // 
-            // buttonUpdateUsers
-            // 
-            this.buttonUpdateUsers.BackColor = System.Drawing.Color.Black;
-            this.buttonUpdateUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateUsers.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdateUsers.Location = new System.Drawing.Point(33, 182);
-            this.buttonUpdateUsers.Name = "buttonUpdateUsers";
-            this.buttonUpdateUsers.Size = new System.Drawing.Size(149, 45);
-            this.buttonUpdateUsers.TabIndex = 6;
-            this.buttonUpdateUsers.Text = "Update Users";
-            this.buttonUpdateUsers.UseVisualStyleBackColor = false;
-            this.buttonUpdateUsers.Click += new System.EventHandler(this.buttonUpdateUsers_Click);
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.Black;
-            this.menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu.ForeColor = System.Drawing.Color.White;
-            this.menu.Location = new System.Drawing.Point(33, 387);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(149, 45);
-            this.menu.TabIndex = 7;
-            this.menu.Text = "Main Menu";
-            this.menu.UseVisualStyleBackColor = false;
-            this.menu.Click += new System.EventHandler(this.menu_Click);
-            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +239,7 @@ namespace InventoryManagement
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Users";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

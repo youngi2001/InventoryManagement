@@ -217,6 +217,7 @@ namespace InventoryManagement
             this.Controls.Add(this.labelProduct);
             this.Controls.Add(this.panel1);
             this.Name = "Product";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

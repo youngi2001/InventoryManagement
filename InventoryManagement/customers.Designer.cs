@@ -29,23 +29,23 @@ namespace InventoryManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.shopName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.customerTable = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.menu = new System.Windows.Forms.Button();
-            this.updateCustomerDetials = new System.Windows.Forms.Button();
-            this.deleteCustomer = new System.Windows.Forms.Button();
-            this.addCustomer = new System.Windows.Forms.Button();
-            this.updateList = new System.Windows.Forms.Button();
             this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.updateList = new System.Windows.Forms.Button();
+            this.menu = new System.Windows.Forms.Button();
+            this.updateCustomerDetials = new System.Windows.Forms.Button();
+            this.deleteCustomer = new System.Windows.Forms.Button();
+            this.addCustomer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerTable)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,14 +84,14 @@ namespace InventoryManagement
             // 
             // customerTable
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customerTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customerTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.customerTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customerTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.customerID,
@@ -100,19 +100,47 @@ namespace InventoryManagement
             this.email});
             this.customerTable.Location = new System.Drawing.Point(217, 179);
             this.customerTable.Name = "customerTable";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customerTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerTable.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customerTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.customerTable.Size = new System.Drawing.Size(790, 485);
             this.customerTable.TabIndex = 7;
             this.customerTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerTable_CellContentClick);
+            // 
+            // customerID
+            // 
+            this.customerID.DataPropertyName = "customerID";
+            this.customerID.HeaderText = "Customer ID";
+            this.customerID.Name = "customerID";
+            this.customerID.Width = 190;
+            // 
+            // fullName
+            // 
+            this.fullName.DataPropertyName = "fullName";
+            this.fullName.HeaderText = "Full Name";
+            this.fullName.Name = "fullName";
+            this.fullName.Width = 250;
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.DataPropertyName = "phoneNumber";
+            this.phoneNumber.HeaderText = "Phone Number";
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.Width = 150;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.Width = 150;
             // 
             // panel2
             // 
@@ -126,6 +154,19 @@ namespace InventoryManagement
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 485);
             this.panel2.TabIndex = 8;
+            // 
+            // updateList
+            // 
+            this.updateList.BackColor = System.Drawing.Color.Black;
+            this.updateList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateList.ForeColor = System.Drawing.Color.White;
+            this.updateList.Location = new System.Drawing.Point(33, 268);
+            this.updateList.Name = "updateList";
+            this.updateList.Size = new System.Drawing.Size(149, 53);
+            this.updateList.TabIndex = 8;
+            this.updateList.Text = "Update List";
+            this.updateList.UseVisualStyleBackColor = false;
+            this.updateList.Click += new System.EventHandler(this.updateList_Click);
             // 
             // menu
             // 
@@ -178,47 +219,6 @@ namespace InventoryManagement
             this.addCustomer.UseVisualStyleBackColor = false;
             this.addCustomer.Click += new System.EventHandler(this.addCustomer_Click);
             // 
-            // updateList
-            // 
-            this.updateList.BackColor = System.Drawing.Color.Black;
-            this.updateList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateList.ForeColor = System.Drawing.Color.White;
-            this.updateList.Location = new System.Drawing.Point(33, 268);
-            this.updateList.Name = "updateList";
-            this.updateList.Size = new System.Drawing.Size(149, 53);
-            this.updateList.TabIndex = 8;
-            this.updateList.Text = "Update List";
-            this.updateList.UseVisualStyleBackColor = false;
-            this.updateList.Click += new System.EventHandler(this.updateList_Click);
-            // 
-            // customerID
-            // 
-            this.customerID.DataPropertyName = "customerID";
-            this.customerID.HeaderText = "Customer ID";
-            this.customerID.Name = "customerID";
-            this.customerID.Width = 190;
-            // 
-            // fullName
-            // 
-            this.fullName.DataPropertyName = "fullName";
-            this.fullName.HeaderText = "Full Name";
-            this.fullName.Name = "fullName";
-            this.fullName.Width = 250;
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.DataPropertyName = "phoneNumber";
-            this.phoneNumber.HeaderText = "Phone Number";
-            this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.Width = 150;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.Width = 150;
-            // 
             // customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +230,7 @@ namespace InventoryManagement
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "customers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "customers";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
