@@ -39,6 +39,7 @@ namespace InventoryManagement
             this.cameraDevice = new System.Windows.Forms.ComboBox();
             this.scanButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +66,7 @@ namespace InventoryManagement
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(12, 183);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(410, 291);
@@ -74,10 +76,10 @@ namespace InventoryManagement
             // textQRCode
             // 
             this.textQRCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textQRCode.Location = new System.Drawing.Point(428, 217);
-            this.textQRCode.MinimumSize = new System.Drawing.Size(0, 30);
+            this.textQRCode.Location = new System.Drawing.Point(428, 230);
+            this.textQRCode.MinimumSize = new System.Drawing.Size(4, 100);
             this.textQRCode.Name = "textQRCode";
-            this.textQRCode.Size = new System.Drawing.Size(111, 30);
+            this.textQRCode.Size = new System.Drawing.Size(131, 100);
             this.textQRCode.TabIndex = 38;
             // 
             // label1
@@ -116,7 +118,7 @@ namespace InventoryManagement
             this.scanButton.Location = new System.Drawing.Point(428, 183);
             this.scanButton.Name = "scanButton";
             this.scanButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.scanButton.Size = new System.Drawing.Size(131, 28);
+            this.scanButton.Size = new System.Drawing.Size(131, 38);
             this.scanButton.TabIndex = 42;
             this.scanButton.Text = "Scan Product";
             this.scanButton.UseVisualStyleBackColor = false;
@@ -127,12 +129,27 @@ namespace InventoryManagement
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.BackColor = System.Drawing.Color.Gray;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.ForeColor = System.Drawing.Color.Black;
+            this.buttonCancel.Location = new System.Drawing.Point(428, 444);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(131, 30);
+            this.buttonCancel.TabIndex = 43;
+            this.buttonCancel.Text = "CANCEL";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // scanProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.ClientSize = new System.Drawing.Size(596, 486);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.scanButton);
             this.Controls.Add(this.cameraDevice);
             this.Controls.Add(this.label5);
@@ -163,5 +180,6 @@ namespace InventoryManagement
         private System.Windows.Forms.ComboBox cameraDevice;
         private System.Windows.Forms.Button scanButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

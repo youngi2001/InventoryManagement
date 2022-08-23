@@ -38,14 +38,16 @@ namespace InventoryManagement
         {
             string user = userID.Text;
             string pass = password.Text;
+            string roleSelected = role.SelectedItem.ToString();
             if (user == "" || pass == "")
             {
                 MessageBox.Show("Empty Fields Detected ! Please fill up all the fields");
                 return;
             }
-            bool r = validateLogin(user, pass);
+            bool r = validateLogin(user, pass, roleSelected);
             if (r && role.SelectedItem =="Administrator")
             {
+                Security.sessionRole = "Administrator";
                 MessageBox.Show("Login Successfully as administrator");
                 AdministratorPage admin = new AdministratorPage();
                 Hide();
@@ -53,6 +55,7 @@ namespace InventoryManagement
             }
             else if (r &&  role.SelectedItem == "Attendant")
             {
+                Security.sessionRole = "Attendant";
                 MessageBox.Show("Login Successfully as attendant");
                 AttendantPage attendant = new AttendantPage();
                 Hide();
@@ -73,13 +76,14 @@ namespace InventoryManagement
         {
             password.UseSystemPasswordChar = true;
         }
-        private bool validateLogin(string user, string pass)
+        private bool validateLogin(string user, string pass , string role)
         {
             db_connection();
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "SELECT `userID`, `password`, `role` FROM `users` WHERE `userID` = @user and `password` = @pass";
+            cmd.CommandText = "SELECT `userID`, `password`, `role` FROM `users` WHERE `userID` = @user and `password` = @pass and `role` = @role";
             cmd.Parameters.AddWithValue("@user", user);
             cmd.Parameters.AddWithValue("@pass", pass);
+            cmd.Parameters.AddWithValue("@role", role);
             cmd.Connection = connection;
             MySqlDataReader login = cmd.ExecuteReader();
             if (login.Read())

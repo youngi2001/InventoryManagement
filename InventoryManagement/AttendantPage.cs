@@ -19,12 +19,12 @@ namespace InventoryManagement
 
         private void users_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Access Denied");
+            MessageBox.Show("Access Denied Admistrators Only", "Warning");
         }
 
         private void product_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Access Denied");
+            MessageBox.Show("Access Denied Admistrators Only", "Warning");
 
         }
 

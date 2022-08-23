@@ -42,9 +42,18 @@ namespace InventoryManagement
 
         private void menu_Click(object sender, EventArgs e)
         {
-            Hide();
-            AdministratorPage back = new AdministratorPage();
-            back.Show();
+            if (Security.sessionRole == "Administrator")
+            {
+                Hide();
+                AdministratorPage back = new AdministratorPage();
+                back.Show();
+            }
+            else
+            {
+                Hide();
+                AttendantPage back = new AttendantPage();
+                back.Show();
+            }
         }
 
         private void buttonNewSales_Click(object sender, EventArgs e)

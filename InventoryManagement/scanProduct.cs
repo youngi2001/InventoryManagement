@@ -18,6 +18,7 @@ namespace InventoryManagement
         public scanProduct()
         {
             InitializeComponent();
+           
         }
 
         FilterInfoCollection filterInfoCollection;
@@ -49,10 +50,7 @@ namespace InventoryManagement
 
         private void scanProduct_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (captureDevice.IsRunning)
-            {
-                captureDevice.Stop();
-            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -72,6 +70,11 @@ namespace InventoryManagement
 
                 }
             }
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

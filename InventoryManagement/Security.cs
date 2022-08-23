@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace InventoryManagement
 {
-    public class Database
+    public class Security
     {
-
+        public static string sessionRole;
     }
 }

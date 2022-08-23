@@ -70,6 +70,12 @@
     <Compile Include="addCustomers.Designer.cs">
       <DependentUpon>addCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="addOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addOrder.Designer.cs">
+      <DependentUpon>addOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="addProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,7 +124,13 @@
     <Compile Include="customers.Designer.cs">
       <DependentUpon>customers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
+    <Compile Include="deleteOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteOrder.Designer.cs">
+      <DependentUpon>deleteOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security.cs" />
     <Compile Include="deleteCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,9 @@
     <EmbeddedResource Include="addCustomers.resx">
       <DependentUpon>addCustomers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addOrder.resx">
+      <DependentUpon>addOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addProduct.resx">
       <DependentUpon>addProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="deleteCustomer.resx">
       <DependentUpon>deleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteOrder.resx">
+      <DependentUpon>deleteOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="deleteUser.resx">
       <DependentUpon>deleteUser.cs</DependentUpon>

@@ -29,26 +29,26 @@ namespace InventoryManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.shopName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menu = new System.Windows.Forms.Button();
-            this.buttonUpdateUsers = new System.Windows.Forms.Button();
-            this.buttonDeleteUser = new System.Windows.Forms.Button();
-            this.buttonAddUser = new System.Windows.Forms.Button();
-            this.userTable = new System.Windows.Forms.DataGridView();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonDeleteOrder = new System.Windows.Forms.Button();
+            this.orderTable = new System.Windows.Forms.DataGridView();
+            this.orderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updateOrder = new System.Windows.Forms.Button();
+            this.buttonAddOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTable)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,10 +85,10 @@ namespace InventoryManagement
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.buttonAddOrder);
+            this.panel2.Controls.Add(this.updateOrder);
             this.panel2.Controls.Add(this.menu);
-            this.panel2.Controls.Add(this.buttonUpdateUsers);
-            this.panel2.Controls.Add(this.buttonDeleteUser);
-            this.panel2.Controls.Add(this.buttonAddUser);
+            this.panel2.Controls.Add(this.buttonDeleteOrder);
             this.panel2.Location = new System.Drawing.Point(0, 160);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 485);
@@ -107,107 +107,110 @@ namespace InventoryManagement
             this.menu.UseVisualStyleBackColor = false;
             this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
-            // buttonUpdateUsers
+            // buttonDeleteOrder
             // 
-            this.buttonUpdateUsers.BackColor = System.Drawing.Color.Black;
-            this.buttonUpdateUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdateUsers.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdateUsers.Location = new System.Drawing.Point(33, 182);
-            this.buttonUpdateUsers.Name = "buttonUpdateUsers";
-            this.buttonUpdateUsers.Size = new System.Drawing.Size(149, 45);
-            this.buttonUpdateUsers.TabIndex = 6;
-            this.buttonUpdateUsers.Text = "Update Order";
-            this.buttonUpdateUsers.UseVisualStyleBackColor = false;
+            this.buttonDeleteOrder.BackColor = System.Drawing.Color.Black;
+            this.buttonDeleteOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteOrder.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteOrder.Location = new System.Drawing.Point(33, 120);
+            this.buttonDeleteOrder.Name = "buttonDeleteOrder";
+            this.buttonDeleteOrder.Size = new System.Drawing.Size(149, 45);
+            this.buttonDeleteOrder.TabIndex = 5;
+            this.buttonDeleteOrder.Text = "Delete Order";
+            this.buttonDeleteOrder.UseVisualStyleBackColor = false;
+            this.buttonDeleteOrder.Click += new System.EventHandler(this.buttonDeleteOrder_Click);
             // 
-            // buttonDeleteUser
+            // orderTable
             // 
-            this.buttonDeleteUser.BackColor = System.Drawing.Color.Black;
-            this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteUser.ForeColor = System.Drawing.Color.White;
-            this.buttonDeleteUser.Location = new System.Drawing.Point(33, 120);
-            this.buttonDeleteUser.Name = "buttonDeleteUser";
-            this.buttonDeleteUser.Size = new System.Drawing.Size(149, 45);
-            this.buttonDeleteUser.TabIndex = 5;
-            this.buttonDeleteUser.Text = "Delete Order";
-            this.buttonDeleteUser.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.orderTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.orderTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.orderID,
+            this.customerID,
+            this.productID,
+            this.quantity,
+            this.total});
+            this.orderTable.Location = new System.Drawing.Point(217, 160);
+            this.orderTable.Name = "orderTable";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.orderTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderTable.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.orderTable.Size = new System.Drawing.Size(790, 485);
+            this.orderTable.TabIndex = 7;
             // 
-            // buttonAddUser
+            // orderID
             // 
-            this.buttonAddUser.BackColor = System.Drawing.Color.Black;
-            this.buttonAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUser.ForeColor = System.Drawing.Color.White;
-            this.buttonAddUser.Location = new System.Drawing.Point(33, 53);
-            this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(149, 41);
-            this.buttonAddUser.TabIndex = 5;
-            this.buttonAddUser.Text = "Add Order";
-            this.buttonAddUser.UseVisualStyleBackColor = false;
+            this.orderID.DataPropertyName = "orderID";
+            this.orderID.HeaderText = "Order ID";
+            this.orderID.Name = "orderID";
             // 
-            // userTable
+            // customerID
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserID,
-            this.fname,
-            this.surName,
-            this.password,
-            this.role});
-            this.userTable.Location = new System.Drawing.Point(217, 160);
-            this.userTable.Name = "userTable";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.userTable.Size = new System.Drawing.Size(790, 485);
-            this.userTable.TabIndex = 7;
+            this.customerID.DataPropertyName = "CustomerID";
+            this.customerID.HeaderText = "Customer ID";
+            this.customerID.Name = "customerID";
+            this.customerID.Width = 164;
             // 
-            // UserID
+            // productID
             // 
-            this.UserID.DataPropertyName = "userID";
-            this.UserID.HeaderText = "Order ID";
-            this.UserID.Name = "UserID";
+            this.productID.DataPropertyName = "ProductID";
+            this.productID.HeaderText = "Product ID";
+            this.productID.Name = "productID";
+            this.productID.Width = 162;
             // 
-            // fname
+            // quantity
             // 
-            this.fname.DataPropertyName = "firstName";
-            this.fname.HeaderText = "Customer ID";
-            this.fname.Name = "fname";
-            this.fname.Width = 164;
+            this.quantity.DataPropertyName = "Quantity";
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            this.quantity.Width = 160;
             // 
-            // surName
+            // total
             // 
-            this.surName.DataPropertyName = "surName";
-            this.surName.HeaderText = "Product ID";
-            this.surName.Name = "surName";
-            this.surName.Width = 162;
+            this.total.DataPropertyName = "Total";
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.Width = 160;
             // 
-            // password
+            // updateOrder
             // 
-            this.password.DataPropertyName = "password";
-            this.password.HeaderText = "Quantity";
-            this.password.Name = "password";
-            this.password.Width = 160;
+            this.updateOrder.BackColor = System.Drawing.Color.Black;
+            this.updateOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateOrder.ForeColor = System.Drawing.Color.White;
+            this.updateOrder.Location = new System.Drawing.Point(33, 197);
+            this.updateOrder.Name = "updateOrder";
+            this.updateOrder.Size = new System.Drawing.Size(149, 45);
+            this.updateOrder.TabIndex = 8;
+            this.updateOrder.Text = "Update Order";
+            this.updateOrder.UseVisualStyleBackColor = false;
+            this.updateOrder.Click += new System.EventHandler(this.updateOrder_Click);
             // 
-            // role
+            // buttonAddOrder
             // 
-            this.role.DataPropertyName = "role";
-            this.role.HeaderText = "Total";
-            this.role.Name = "role";
-            this.role.Width = 160;
+            this.buttonAddOrder.BackColor = System.Drawing.Color.Black;
+            this.buttonAddOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddOrder.ForeColor = System.Drawing.Color.White;
+            this.buttonAddOrder.Location = new System.Drawing.Point(33, 52);
+            this.buttonAddOrder.Name = "buttonAddOrder";
+            this.buttonAddOrder.Size = new System.Drawing.Size(149, 41);
+            this.buttonAddOrder.TabIndex = 9;
+            this.buttonAddOrder.Text = "Add Order";
+            this.buttonAddOrder.UseVisualStyleBackColor = false;
+            this.buttonAddOrder.Click += new System.EventHandler(this.buttonAddOrder_Click);
             // 
             // Orders
             // 
@@ -215,7 +218,7 @@ namespace InventoryManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.ClientSize = new System.Drawing.Size(1016, 676);
-            this.Controls.Add(this.userTable);
+            this.Controls.Add(this.orderTable);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -225,7 +228,7 @@ namespace InventoryManagement
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,14 +241,14 @@ namespace InventoryManagement
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button menu;
-        private System.Windows.Forms.Button buttonUpdateUsers;
-        private System.Windows.Forms.Button buttonDeleteUser;
-        private System.Windows.Forms.Button buttonAddUser;
-        private System.Windows.Forms.DataGridView userTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn role;
+        private System.Windows.Forms.Button buttonDeleteOrder;
+        private System.Windows.Forms.DataGridView orderTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.Button updateOrder;
+        private System.Windows.Forms.Button buttonAddOrder;
     }
 }

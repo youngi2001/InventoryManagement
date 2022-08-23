@@ -1,7 +1,7 @@
 ﻿
 namespace InventoryManagement
 {
-    partial class addSale
+    partial class addOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -33,15 +33,15 @@ namespace InventoryManagement
             this.shopName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelFirstname = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.customerID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.productID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.quantity = new System.Windows.Forms.TextBox();
+            this.cancel = new System.Windows.Forms.Button();
+            this.insertOrder = new System.Windows.Forms.Button();
             this.totalAmount = new System.Windows.Forms.TextBox();
-            this.addAccount = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.userID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@ namespace InventoryManagement
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 90);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 5;
             // 
             // shopName
             // 
@@ -69,130 +69,130 @@ namespace InventoryManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 117);
+            this.label1.Location = new System.Drawing.Point(219, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 30);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "NEW SALE";
+            this.label1.Size = new System.Drawing.Size(138, 30);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "NEW ORDER";
             // 
             // labelFirstname
             // 
             this.labelFirstname.AutoSize = true;
             this.labelFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFirstname.Location = new System.Drawing.Point(307, 242);
+            this.labelFirstname.Location = new System.Drawing.Point(56, 201);
             this.labelFirstname.Name = "labelFirstname";
             this.labelFirstname.Size = new System.Drawing.Size(99, 20);
-            this.labelFirstname.TabIndex = 27;
+            this.labelFirstname.TabIndex = 28;
             this.labelFirstname.Text = "Customer ID";
+            // 
+            // customerID
+            // 
+            this.customerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerID.Location = new System.Drawing.Point(60, 224);
+            this.customerID.Name = "customerID";
+            this.customerID.Size = new System.Drawing.Size(210, 26);
+            this.customerID.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(301, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 20);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Product ID";
+            // 
+            // productID
+            // 
+            this.productID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productID.Location = new System.Drawing.Point(305, 224);
+            this.productID.Name = "productID";
+            this.productID.Size = new System.Drawing.Size(228, 26);
+            this.productID.TabIndex = 34;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 342);
+            this.label3.Location = new System.Drawing.Point(56, 317);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
-            this.label3.TabIndex = 29;
+            this.label3.TabIndex = 35;
             this.label3.Text = "Quantity";
+            // 
+            // quantity
+            // 
+            this.quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantity.Location = new System.Drawing.Point(60, 340);
+            this.quantity.Name = "quantity";
+            this.quantity.Size = new System.Drawing.Size(228, 26);
+            this.quantity.TabIndex = 36;
+            // 
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.Color.OrangeRed;
+            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel.ForeColor = System.Drawing.Color.Black;
+            this.cancel.Location = new System.Drawing.Point(305, 467);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(112, 28);
+            this.cancel.TabIndex = 40;
+            this.cancel.Text = "CANCEL";
+            this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // insertOrder
+            // 
+            this.insertOrder.BackColor = System.Drawing.Color.Black;
+            this.insertOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertOrder.ForeColor = System.Drawing.Color.White;
+            this.insertOrder.Location = new System.Drawing.Point(423, 467);
+            this.insertOrder.Name = "insertOrder";
+            this.insertOrder.Size = new System.Drawing.Size(110, 28);
+            this.insertOrder.TabIndex = 39;
+            this.insertOrder.Text = "ADD";
+            this.insertOrder.UseVisualStyleBackColor = false;
+            this.insertOrder.Click += new System.EventHandler(this.addOrder_Click);
+            // 
+            // totalAmount
+            // 
+            this.totalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAmount.Location = new System.Drawing.Point(305, 340);
+            this.totalAmount.Name = "totalAmount";
+            this.totalAmount.Size = new System.Drawing.Size(228, 26);
+            this.totalAmount.TabIndex = 38;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(307, 342);
+            this.label4.Location = new System.Drawing.Point(301, 317);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 20);
-            this.label4.TabIndex = 30;
+            this.label4.TabIndex = 37;
             this.label4.Text = "Total Amount ($)";
             // 
-            // customerID
-            // 
-            this.customerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerID.Location = new System.Drawing.Point(311, 265);
-            this.customerID.Name = "customerID";
-            this.customerID.Size = new System.Drawing.Size(210, 26);
-            this.customerID.TabIndex = 31;
-            // 
-            // quantity
-            // 
-            this.quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.Location = new System.Drawing.Point(60, 365);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(228, 26);
-            this.quantity.TabIndex = 33;
-            // 
-            // totalAmount
-            // 
-            this.totalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalAmount.Location = new System.Drawing.Point(311, 365);
-            this.totalAmount.Name = "totalAmount";
-            this.totalAmount.Size = new System.Drawing.Size(228, 26);
-            this.totalAmount.TabIndex = 34;
-            // 
-            // addAccount
-            // 
-            this.addAccount.BackColor = System.Drawing.Color.Black;
-            this.addAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addAccount.ForeColor = System.Drawing.Color.White;
-            this.addAccount.Location = new System.Drawing.Point(429, 492);
-            this.addAccount.Name = "addAccount";
-            this.addAccount.Size = new System.Drawing.Size(110, 28);
-            this.addAccount.TabIndex = 35;
-            this.addAccount.Text = "ADD";
-            this.addAccount.UseVisualStyleBackColor = false;
-            this.addAccount.Click += new System.EventHandler(this.addAccount_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(311, 492);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 28);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "CANCEL";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(60, 242);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "User ID";
-            // 
-            // userID
-            // 
-            this.userID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userID.Location = new System.Drawing.Point(60, 265);
-            this.userID.Name = "userID";
-            this.userID.Size = new System.Drawing.Size(228, 26);
-            this.userID.TabIndex = 38;
-            // 
-            // addSale
+            // addOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.ClientSize = new System.Drawing.Size(600, 565);
-            this.Controls.Add(this.userID);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.addAccount);
+            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.insertOrder);
             this.Controls.Add(this.totalAmount);
-            this.Controls.Add(this.quantity);
-            this.Controls.Add(this.customerID);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.quantity);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.productID);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.customerID);
             this.Controls.Add(this.labelFirstname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "addSale";
-            this.Text = "New Sale";
+            this.Name = "addOrder";
+            this.Text = "Order";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -206,14 +206,14 @@ namespace InventoryManagement
         private System.Windows.Forms.Label shopName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelFirstname;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox customerID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox productID;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox quantity;
+        private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Button insertOrder;
         private System.Windows.Forms.TextBox totalAmount;
-        private System.Windows.Forms.Button addAccount;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox userID;
+        private System.Windows.Forms.Label label4;
     }
 }
