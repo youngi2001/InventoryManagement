@@ -217,7 +217,7 @@ namespace InventoryManagement
             this.Controls.Add(this.panel1);
             this.Name = "AdministratorPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Administrator";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

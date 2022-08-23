@@ -120,7 +120,7 @@ namespace InventoryManagement
             this.buttonChangePassword.Name = "buttonChangePassword";
             this.buttonChangePassword.Size = new System.Drawing.Size(149, 53);
             this.buttonChangePassword.TabIndex = 5;
-            this.buttonChangePassword.Text = "Change User Password";
+            this.buttonChangePassword.Text = "Change User Detials";
             this.buttonChangePassword.UseVisualStyleBackColor = false;
             this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
             // 

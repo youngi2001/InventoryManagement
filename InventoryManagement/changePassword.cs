@@ -42,7 +42,7 @@ namespace InventoryManagement
 
         private void newPassword_TextChanged(object sender, EventArgs e)
         {
-            newPassword.UseSystemPasswordChar = true;
+            
         }
 
         
@@ -61,11 +61,16 @@ namespace InventoryManagement
         private void changePassword2()
         {
             db_connection();
-            string query = "UPDATE `users` SET `password`='" + newPassword.Text + "' WHERE `userID` = '" + userID.Text + "'";
+            string query = "UPDATE `users` SET `firstName`='"+firstName.Text+ "' ,`surName`='"+surName.Text+ "', `password`='" + password.Text + "' , `role`='"+role.SelectedItem+"' WHERE `userID` = '" + userID.Text + "'";
             MySqlCommand cmd = new MySqlCommand(query, connection);
             int rowsAffected = cmd.ExecuteNonQuery();
             MessageBox.Show(rowsAffected + " row updated from database");
 
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+            password.UseSystemPasswordChar = true;
         }
     }
 }

@@ -44,14 +44,20 @@ namespace InventoryManagement
                 return;
             }
             bool r = validateLogin(user, pass);
-            if (r)
+            if (r && role.SelectedItem =="Administrator")
             {
-                MessageBox.Show("Login Successfull");
+                MessageBox.Show("Login Successfully as administrator");
                 AdministratorPage admin = new AdministratorPage();
                 Hide();
                 admin.Show();
             }
-
+            else if (r &&  role.SelectedItem == "Attendant")
+            {
+                MessageBox.Show("Login Successfully as attendant");
+                AttendantPage attendant = new AttendantPage();
+                Hide();
+                attendant.Show();
+            }
             else
             {
                 MessageBox.Show("Incorrect Login Credentials");
