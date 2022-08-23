@@ -29,13 +29,15 @@ namespace InventoryManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.shopName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonAddOrder = new System.Windows.Forms.Button();
+            this.updateOrder = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.Button();
             this.buttonDeleteOrder = new System.Windows.Forms.Button();
             this.orderTable = new System.Windows.Forms.DataGridView();
@@ -44,8 +46,6 @@ namespace InventoryManagement
             this.productID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updateOrder = new System.Windows.Forms.Button();
-            this.buttonAddOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderTable)).BeginInit();
@@ -94,6 +94,32 @@ namespace InventoryManagement
             this.panel2.Size = new System.Drawing.Size(211, 485);
             this.panel2.TabIndex = 6;
             // 
+            // buttonAddOrder
+            // 
+            this.buttonAddOrder.BackColor = System.Drawing.Color.Black;
+            this.buttonAddOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddOrder.ForeColor = System.Drawing.Color.White;
+            this.buttonAddOrder.Location = new System.Drawing.Point(33, 52);
+            this.buttonAddOrder.Name = "buttonAddOrder";
+            this.buttonAddOrder.Size = new System.Drawing.Size(149, 41);
+            this.buttonAddOrder.TabIndex = 9;
+            this.buttonAddOrder.Text = "Add Order";
+            this.buttonAddOrder.UseVisualStyleBackColor = false;
+            this.buttonAddOrder.Click += new System.EventHandler(this.buttonAddOrder_Click);
+            // 
+            // updateOrder
+            // 
+            this.updateOrder.BackColor = System.Drawing.Color.Black;
+            this.updateOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateOrder.ForeColor = System.Drawing.Color.White;
+            this.updateOrder.Location = new System.Drawing.Point(33, 197);
+            this.updateOrder.Name = "updateOrder";
+            this.updateOrder.Size = new System.Drawing.Size(149, 45);
+            this.updateOrder.TabIndex = 8;
+            this.updateOrder.Text = "Update Order";
+            this.updateOrder.UseVisualStyleBackColor = false;
+            this.updateOrder.Click += new System.EventHandler(this.updateOrder_Click);
+            // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.Black;
@@ -122,14 +148,14 @@ namespace InventoryManagement
             // 
             // orderTable
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.orderTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.orderTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.orderTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orderTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderID,
@@ -139,18 +165,19 @@ namespace InventoryManagement
             this.total});
             this.orderTable.Location = new System.Drawing.Point(217, 160);
             this.orderTable.Name = "orderTable";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.orderTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderTable.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.orderTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.orderTable.Size = new System.Drawing.Size(790, 485);
             this.orderTable.TabIndex = 7;
+            this.orderTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orderTable_CellContentClick);
             // 
             // orderID
             // 
@@ -185,32 +212,6 @@ namespace InventoryManagement
             this.total.HeaderText = "Total";
             this.total.Name = "total";
             this.total.Width = 160;
-            // 
-            // updateOrder
-            // 
-            this.updateOrder.BackColor = System.Drawing.Color.Black;
-            this.updateOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateOrder.ForeColor = System.Drawing.Color.White;
-            this.updateOrder.Location = new System.Drawing.Point(33, 197);
-            this.updateOrder.Name = "updateOrder";
-            this.updateOrder.Size = new System.Drawing.Size(149, 45);
-            this.updateOrder.TabIndex = 8;
-            this.updateOrder.Text = "Update Order";
-            this.updateOrder.UseVisualStyleBackColor = false;
-            this.updateOrder.Click += new System.EventHandler(this.updateOrder_Click);
-            // 
-            // buttonAddOrder
-            // 
-            this.buttonAddOrder.BackColor = System.Drawing.Color.Black;
-            this.buttonAddOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddOrder.ForeColor = System.Drawing.Color.White;
-            this.buttonAddOrder.Location = new System.Drawing.Point(33, 52);
-            this.buttonAddOrder.Name = "buttonAddOrder";
-            this.buttonAddOrder.Size = new System.Drawing.Size(149, 41);
-            this.buttonAddOrder.TabIndex = 9;
-            this.buttonAddOrder.Text = "Add Order";
-            this.buttonAddOrder.UseVisualStyleBackColor = false;
-            this.buttonAddOrder.Click += new System.EventHandler(this.buttonAddOrder_Click);
             // 
             // Orders
             // 

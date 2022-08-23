@@ -85,5 +85,10 @@ namespace InventoryManagement
             deleteOrder delOder = new deleteOrder();
             delOder.Show();
         }
+
+        private void orderTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
