@@ -11,4 +11,8 @@ Administrator can navigate to all the sections avialable to him which includes
 5. Products Section
 
 
-Attendant can also update all the sales in the system and even go through all the list of customers Shoprite deals with
+Attendant can also update all the sales in the system and even go through all the list of customers who shop at Shoprite. Also Attendants do not have all the privilages of administration hence that cannot access every section of the system. They only have access to 
+1. Sales Section
+2. Customer Section
+3. Order Section
+For additional security, users will have to specify thier role that is either an Administrator or an Attendant when accessing the platform. Moreover, once they specify that, the software is designed to be capable of crosschecking with the database to see if the information provided by the user is really accurate. After the confimation, now the user can access either the Administration section or the Attendant section accordingly.
