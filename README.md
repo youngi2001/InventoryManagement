@@ -15,4 +15,5 @@ Attendant can also update all the sales in the system and even go through all th
 1. Sales Section
 2. Customer Section
 3. Order Section
+
 For additional security, users will have to specify thier role that is either an Administrator or an Attendant when accessing the platform. Moreover, once they specify that, the software is designed to be capable of crosschecking with the database to see if the information provided by the user is really accurate. After the confimation, now the user can access either the Administration section or the Attendant section accordingly.
