@@ -17,3 +17,7 @@ Attendant can also update all the sales in the system and even go through all th
 3. Order Section
 
 For additional security, users will have to specify thier role that is either an Administrator or an Attendant when accessing the platform. Moreover, once they specify that, the software is designed to be capable of crosschecking with the database to see if the information provided by the user is really accurate. After the confimation, now the user can access either the Administration section or the Attendant section accordingly.
+
+Since attendants do not have authorization to the user section and Product section, only the administrator can make changes with those section. Also administrator can either change the role of a user of delete the user from the system.
+
+Attendant can record dialy sales, add customers to the system and also enter every order purchased by a customer.
