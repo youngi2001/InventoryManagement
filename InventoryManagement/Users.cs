@@ -77,7 +77,7 @@ namespace InventoryManagement
 
         private void buttonChangePassword_Click(object sender, EventArgs e)
         {
-            changePassword newPass = new changePassword();
+            updateUserDetails newPass = new updateUserDetails();
             newPass.Show();
         }
 

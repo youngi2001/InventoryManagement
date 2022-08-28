@@ -43,6 +43,7 @@ namespace InventoryManagement
             this.surName = new System.Windows.Forms.TextBox();
             this.firstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@ namespace InventoryManagement
             // 
             this.labelRole.AutoSize = true;
             this.labelRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRole.Location = new System.Drawing.Point(83, 463);
+            this.labelRole.Location = new System.Drawing.Point(83, 396);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(91, 20);
             this.labelRole.TabIndex = 30;
@@ -80,7 +81,7 @@ namespace InventoryManagement
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(83, 393);
+            this.labelPassword.Location = new System.Drawing.Point(321, 315);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(78, 20);
             this.labelPassword.TabIndex = 29;
@@ -100,7 +101,7 @@ namespace InventoryManagement
             // 
             this.labelSurname.AutoSize = true;
             this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSurname.Location = new System.Drawing.Point(295, 228);
+            this.labelSurname.Location = new System.Drawing.Point(321, 228);
             this.labelSurname.Name = "labelSurname";
             this.labelSurname.Size = new System.Drawing.Size(76, 20);
             this.labelSurname.TabIndex = 27;
@@ -123,9 +124,9 @@ namespace InventoryManagement
             this.role.Items.AddRange(new object[] {
             "Administrator",
             "Attendant"});
-            this.role.Location = new System.Drawing.Point(78, 486);
+            this.role.Location = new System.Drawing.Point(78, 429);
             this.role.Name = "role";
-            this.role.Size = new System.Drawing.Size(194, 28);
+            this.role.Size = new System.Drawing.Size(480, 28);
             this.role.TabIndex = 25;
             // 
             // addAccount
@@ -133,9 +134,9 @@ namespace InventoryManagement
             this.addAccount.BackColor = System.Drawing.Color.Black;
             this.addAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addAccount.ForeColor = System.Drawing.Color.White;
-            this.addAccount.Location = new System.Drawing.Point(289, 486);
+            this.addAccount.Location = new System.Drawing.Point(399, 500);
             this.addAccount.Name = "addAccount";
-            this.addAccount.Size = new System.Drawing.Size(185, 28);
+            this.addAccount.Size = new System.Drawing.Size(159, 34);
             this.addAccount.TabIndex = 24;
             this.addAccount.Text = "ADD ACCOUNT";
             this.addAccount.UseVisualStyleBackColor = false;
@@ -144,9 +145,9 @@ namespace InventoryManagement
             // password
             // 
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(78, 416);
+            this.password.Location = new System.Drawing.Point(323, 338);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(394, 26);
+            this.password.Size = new System.Drawing.Size(235, 26);
             this.password.TabIndex = 23;
             this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
@@ -155,15 +156,15 @@ namespace InventoryManagement
             this.userId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userId.Location = new System.Drawing.Point(78, 338);
             this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(394, 26);
+            this.userId.Size = new System.Drawing.Size(225, 26);
             this.userId.TabIndex = 22;
             // 
             // surName
             // 
             this.surName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.surName.Location = new System.Drawing.Point(289, 251);
+            this.surName.Location = new System.Drawing.Point(323, 251);
             this.surName.Name = "surName";
-            this.surName.Size = new System.Drawing.Size(183, 26);
+            this.surName.Size = new System.Drawing.Size(235, 26);
             this.surName.TabIndex = 21;
             // 
             // firstName
@@ -171,7 +172,7 @@ namespace InventoryManagement
             this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName.Location = new System.Drawing.Point(78, 251);
             this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(194, 26);
+            this.firstName.Size = new System.Drawing.Size(225, 26);
             this.firstName.TabIndex = 20;
             // 
             // label1
@@ -184,12 +185,26 @@ namespace InventoryManagement
             this.label1.TabIndex = 17;
             this.label1.Text = "ADD AN ACCOUNT";
             // 
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.Color.OrangeRed;
+            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel.ForeColor = System.Drawing.Color.Black;
+            this.cancel.Location = new System.Drawing.Point(271, 500);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(112, 34);
+            this.cancel.TabIndex = 37;
+            this.cancel.Text = "CANCEL";
+            this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
             // addUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.ClientSize = new System.Drawing.Size(600, 565);
+            this.Controls.Add(this.cancel);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelEmail);
@@ -228,5 +243,6 @@ namespace InventoryManagement
         private System.Windows.Forms.TextBox surName;
         private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button cancel;
     }
 }

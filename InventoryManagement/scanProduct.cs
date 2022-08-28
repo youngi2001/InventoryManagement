@@ -75,6 +75,10 @@ namespace InventoryManagement
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             Hide();
+            if (captureDevice.IsRunning)
+            {
+                captureDevice.Stop();
+            }
         }
     }
 }

@@ -100,11 +100,23 @@
     <Compile Include="AttendantPage.Designer.cs">
       <DependentUpon>AttendantPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="changePassword.cs">
+    <Compile Include="updateCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="changePassword.Designer.cs">
-      <DependentUpon>changePassword.cs</DependentUpon>
+    <Compile Include="updateCustomerDetails.Designer.cs">
+      <DependentUpon>updateCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateProductDetails.Designer.cs">
+      <DependentUpon>updateProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateUserDetails.Designer.cs">
+      <DependentUpon>updateUserDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="createAccount.cs">
       <SubType>Form</SubType>
@@ -208,8 +220,14 @@
     <EmbeddedResource Include="AttendantPage.resx">
       <DependentUpon>AttendantPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="changePassword.resx">
-      <DependentUpon>changePassword.cs</DependentUpon>
+    <EmbeddedResource Include="updateCustomerDetails.resx">
+      <DependentUpon>updateCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateProductDetails.resx">
+      <DependentUpon>updateProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateUserDetails.resx">
+      <DependentUpon>updateUserDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="createAccount.resx">
       <DependentUpon>createAccount.cs</DependentUpon>

@@ -98,7 +98,7 @@ namespace InventoryManagement
             this.signIn.ForeColor = System.Drawing.Color.White;
             this.signIn.Location = new System.Drawing.Point(369, 160);
             this.signIn.Name = "signIn";
-            this.signIn.Size = new System.Drawing.Size(82, 28);
+            this.signIn.Size = new System.Drawing.Size(82, 34);
             this.signIn.TabIndex = 5;
             this.signIn.Text = "Signin";
             this.signIn.UseVisualStyleBackColor = false;
@@ -145,9 +145,9 @@ namespace InventoryManagement
             this.signUp.BackColor = System.Drawing.Color.Black;
             this.signUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUp.ForeColor = System.Drawing.Color.White;
-            this.signUp.Location = new System.Drawing.Point(268, 461);
+            this.signUp.Location = new System.Drawing.Point(266, 457);
             this.signUp.Name = "signUp";
-            this.signUp.Size = new System.Drawing.Size(185, 28);
+            this.signUp.Size = new System.Drawing.Size(185, 34);
             this.signUp.TabIndex = 10;
             this.signUp.Text = "Create Account";
             this.signUp.UseVisualStyleBackColor = false;

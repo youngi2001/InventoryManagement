@@ -70,5 +70,11 @@ namespace InventoryManagement
         {
            
         }
+
+        private void buttonChangeProductDetials_Click(object sender, EventArgs e)
+        {
+            updateProductDetails upProduct = new updateProductDetails();
+            upProduct.Show();
+        }
     }
 }

@@ -43,9 +43,9 @@ namespace InventoryManagement
             this.panel2 = new System.Windows.Forms.Panel();
             this.updateList = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.Button();
-            this.updateCustomerDetials = new System.Windows.Forms.Button();
             this.deleteCustomer = new System.Windows.Forms.Button();
             this.addCustomer = new System.Windows.Forms.Button();
+            this.buttonUpdateCustomerDetails = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerTable)).BeginInit();
             this.panel2.SuspendLayout();
@@ -145,9 +145,9 @@ namespace InventoryManagement
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.buttonUpdateCustomerDetails);
             this.panel2.Controls.Add(this.updateList);
             this.panel2.Controls.Add(this.menu);
-            this.panel2.Controls.Add(this.updateCustomerDetials);
             this.panel2.Controls.Add(this.deleteCustomer);
             this.panel2.Controls.Add(this.addCustomer);
             this.panel2.Location = new System.Drawing.Point(0, 179);
@@ -181,18 +181,6 @@ namespace InventoryManagement
             this.menu.UseVisualStyleBackColor = false;
             this.menu.Click += new System.EventHandler(this.menu_Click);
             // 
-            // updateCustomerDetials
-            // 
-            this.updateCustomerDetials.BackColor = System.Drawing.Color.Black;
-            this.updateCustomerDetials.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateCustomerDetials.ForeColor = System.Drawing.Color.White;
-            this.updateCustomerDetials.Location = new System.Drawing.Point(33, 182);
-            this.updateCustomerDetials.Name = "updateCustomerDetials";
-            this.updateCustomerDetials.Size = new System.Drawing.Size(149, 63);
-            this.updateCustomerDetials.TabIndex = 6;
-            this.updateCustomerDetials.Text = "Update Customer Details";
-            this.updateCustomerDetials.UseVisualStyleBackColor = false;
-            // 
             // deleteCustomer
             // 
             this.deleteCustomer.BackColor = System.Drawing.Color.Black;
@@ -218,6 +206,19 @@ namespace InventoryManagement
             this.addCustomer.Text = "Add Customer";
             this.addCustomer.UseVisualStyleBackColor = false;
             this.addCustomer.Click += new System.EventHandler(this.addCustomer_Click);
+            // 
+            // buttonUpdateCustomerDetails
+            // 
+            this.buttonUpdateCustomerDetails.BackColor = System.Drawing.Color.Black;
+            this.buttonUpdateCustomerDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateCustomerDetails.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdateCustomerDetails.Location = new System.Drawing.Point(33, 183);
+            this.buttonUpdateCustomerDetails.Name = "buttonUpdateCustomerDetails";
+            this.buttonUpdateCustomerDetails.Size = new System.Drawing.Size(149, 63);
+            this.buttonUpdateCustomerDetails.TabIndex = 9;
+            this.buttonUpdateCustomerDetails.Text = "Update Customer Details";
+            this.buttonUpdateCustomerDetails.UseVisualStyleBackColor = false;
+            this.buttonUpdateCustomerDetails.Click += new System.EventHandler(this.buttonUpdateCustomerDetails_Click);
             // 
             // customers
             // 
@@ -249,7 +250,6 @@ namespace InventoryManagement
         private System.Windows.Forms.DataGridView customerTable;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button menu;
-        private System.Windows.Forms.Button updateCustomerDetials;
         private System.Windows.Forms.Button deleteCustomer;
         private System.Windows.Forms.Button addCustomer;
         private System.Windows.Forms.Button updateList;
@@ -257,5 +257,6 @@ namespace InventoryManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.Button buttonUpdateCustomerDetails;
     }
 }

@@ -110,7 +110,7 @@ namespace InventoryManagement
             this.customerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerID.Location = new System.Drawing.Point(311, 265);
             this.customerID.Name = "customerID";
-            this.customerID.Size = new System.Drawing.Size(210, 26);
+            this.customerID.Size = new System.Drawing.Size(228, 26);
             this.customerID.TabIndex = 31;
             // 
             // quantity
@@ -134,9 +134,9 @@ namespace InventoryManagement
             this.addAccount.BackColor = System.Drawing.Color.Black;
             this.addAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addAccount.ForeColor = System.Drawing.Color.White;
-            this.addAccount.Location = new System.Drawing.Point(429, 492);
+            this.addAccount.Location = new System.Drawing.Point(429, 486);
             this.addAccount.Name = "addAccount";
-            this.addAccount.Size = new System.Drawing.Size(110, 28);
+            this.addAccount.Size = new System.Drawing.Size(110, 34);
             this.addAccount.TabIndex = 35;
             this.addAccount.Text = "ADD";
             this.addAccount.UseVisualStyleBackColor = false;
@@ -147,9 +147,9 @@ namespace InventoryManagement
             this.button1.BackColor = System.Drawing.Color.OrangeRed;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(311, 492);
+            this.button1.Location = new System.Drawing.Point(311, 486);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 28);
+            this.button1.Size = new System.Drawing.Size(112, 34);
             this.button1.TabIndex = 36;
             this.button1.Text = "CANCEL";
             this.button1.UseVisualStyleBackColor = false;

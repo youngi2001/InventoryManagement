@@ -136,7 +136,7 @@ namespace InventoryManagement
             this.cancel.ForeColor = System.Drawing.Color.Black;
             this.cancel.Location = new System.Drawing.Point(305, 467);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(112, 28);
+            this.cancel.Size = new System.Drawing.Size(112, 34);
             this.cancel.TabIndex = 40;
             this.cancel.Text = "CANCEL";
             this.cancel.UseVisualStyleBackColor = false;
@@ -149,7 +149,7 @@ namespace InventoryManagement
             this.insertOrder.ForeColor = System.Drawing.Color.White;
             this.insertOrder.Location = new System.Drawing.Point(423, 467);
             this.insertOrder.Name = "insertOrder";
-            this.insertOrder.Size = new System.Drawing.Size(110, 28);
+            this.insertOrder.Size = new System.Drawing.Size(110, 34);
             this.insertOrder.TabIndex = 39;
             this.insertOrder.Text = "ADD";
             this.insertOrder.UseVisualStyleBackColor = false;

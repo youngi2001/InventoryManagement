@@ -189,11 +189,11 @@ namespace InventoryManagement
             // 
             // buttonCancel
             // 
-            this.buttonCancel.BackColor = System.Drawing.Color.White;
+            this.buttonCancel.BackColor = System.Drawing.Color.OrangeRed;
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.Location = new System.Drawing.Point(301, 492);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(94, 38);
+            this.buttonCancel.Size = new System.Drawing.Size(94, 34);
             this.buttonCancel.TabIndex = 40;
             this.buttonCancel.Text = "CANCEL";
             this.buttonCancel.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@ namespace InventoryManagement
             this.addProductButton.ForeColor = System.Drawing.Color.White;
             this.addProductButton.Location = new System.Drawing.Point(401, 492);
             this.addProductButton.Name = "addProductButton";
-            this.addProductButton.Size = new System.Drawing.Size(146, 38);
+            this.addProductButton.Size = new System.Drawing.Size(146, 34);
             this.addProductButton.TabIndex = 41;
             this.addProductButton.Text = "ADD PRODUCT";
             this.addProductButton.UseVisualStyleBackColor = false;

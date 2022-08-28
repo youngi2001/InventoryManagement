@@ -90,6 +90,13 @@ namespace InventoryManagement
             newCustomer.Show();
 
         }
+
+       
+        private void buttonUpdateCustomerDetails_Click(object sender, EventArgs e)
+        {
+            updateCustomerDetails upCus = new updateCustomerDetails();
+            upCus.Show();
+        }
     }
     
 }

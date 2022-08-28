@@ -56,5 +56,10 @@ namespace InventoryManagement
         {
             password.UseSystemPasswordChar = true;
         }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

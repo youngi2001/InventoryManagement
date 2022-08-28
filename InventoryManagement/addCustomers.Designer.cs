@@ -41,6 +41,7 @@ namespace InventoryManagement
             this.addCustomer = new System.Windows.Forms.Button();
             this.labelCustomerID = new System.Windows.Forms.Label();
             this.customerID = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +90,7 @@ namespace InventoryManagement
             this.fullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullName.Location = new System.Drawing.Point(47, 326);
             this.fullName.Name = "fullName";
-            this.fullName.Size = new System.Drawing.Size(432, 26);
+            this.fullName.Size = new System.Drawing.Size(492, 26);
             this.fullName.TabIndex = 28;
             this.fullName.TextChanged += new System.EventHandler(this.fullName_TextChanged);
             // 
@@ -97,7 +98,7 @@ namespace InventoryManagement
             // 
             this.labelPhoneNumber.AutoSize = true;
             this.labelPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNumber.Location = new System.Drawing.Point(56, 449);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(290, 377);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(115, 20);
             this.labelPhoneNumber.TabIndex = 29;
@@ -106,7 +107,7 @@ namespace InventoryManagement
             // phoneNumber
             // 
             this.phoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneNumber.Location = new System.Drawing.Point(47, 472);
+            this.phoneNumber.Location = new System.Drawing.Point(313, 400);
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.Size = new System.Drawing.Size(226, 26);
             this.phoneNumber.TabIndex = 30;
@@ -126,7 +127,7 @@ namespace InventoryManagement
             this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email.Location = new System.Drawing.Point(47, 400);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(432, 26);
+            this.email.Size = new System.Drawing.Size(243, 26);
             this.email.TabIndex = 32;
             // 
             // addCustomer
@@ -134,11 +135,11 @@ namespace InventoryManagement
             this.addCustomer.BackColor = System.Drawing.Color.Black;
             this.addCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCustomer.ForeColor = System.Drawing.Color.White;
-            this.addCustomer.Location = new System.Drawing.Point(294, 470);
+            this.addCustomer.Location = new System.Drawing.Point(427, 492);
             this.addCustomer.Name = "addCustomer";
-            this.addCustomer.Size = new System.Drawing.Size(185, 28);
+            this.addCustomer.Size = new System.Drawing.Size(112, 34);
             this.addCustomer.TabIndex = 34;
-            this.addCustomer.Text = "ADD CUSTOMER";
+            this.addCustomer.Text = "ADD";
             this.addCustomer.UseVisualStyleBackColor = false;
             this.addCustomer.Click += new System.EventHandler(this.addCustomer_Click);
             // 
@@ -157,8 +158,21 @@ namespace InventoryManagement
             this.customerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerID.Location = new System.Drawing.Point(47, 252);
             this.customerID.Name = "customerID";
-            this.customerID.Size = new System.Drawing.Size(432, 26);
+            this.customerID.Size = new System.Drawing.Size(492, 26);
             this.customerID.TabIndex = 36;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.OrangeRed;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(294, 492);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "CANCEL";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // addCustomers
             // 
@@ -166,6 +180,7 @@ namespace InventoryManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
             this.ClientSize = new System.Drawing.Size(582, 565);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.customerID);
             this.Controls.Add(this.labelCustomerID);
             this.Controls.Add(this.addCustomer);
@@ -200,5 +215,6 @@ namespace InventoryManagement
         private System.Windows.Forms.Button addCustomer;
         private System.Windows.Forms.Label labelCustomerID;
         private System.Windows.Forms.TextBox customerID;
+        private System.Windows.Forms.Button button1;
     }
 }
